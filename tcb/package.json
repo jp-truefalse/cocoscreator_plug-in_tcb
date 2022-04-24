@@ -1,0 +1,19 @@
+{
+    "name": "tcb",
+    "version": "0.7.2_1.3.3",
+    "description": "云开发",
+    "author": "Cocos Creator2.4.8",
+    "main": "main.js",
+    "main-menu": {
+      "i18n:MAIN_MENU.package.title/tcb": {
+        "message": "tcb:openPanel"
+      }
+    },
+    "panel":{
+      "main":"panel/index.js",
+      "type":"dockable",
+      "title":"tcb",
+      "width":500,
+      "height":500
+    }
+  } 

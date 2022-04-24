@@ -1,0 +1,27 @@
+<div>
+  <div>
+    <h2 style="color: #f90;">TCB文件配置</h2>
+    <ui-button v-on:confirm="export_tcb">导入</ui-button>
+    <ui-button v-on:confirm="unload_tcb">卸载</ui-button>
+    <hr />
+  </div>
+  <div>
+    <ui-prop name="平台">
+      <ui-input v-value="platform" style="width: 250px;"></ui-input>
+    </ui-prop>
+    <ui-prop name="云开发环境ID">
+      <ui-input v-value="env_id" style="width: 250px;"></ui-input>
+    </ui-prop>
+    <ui-prop name="云开发应用标识">
+      <ui-input v-value="appSign" style="width: 250px;"></ui-input>
+    </ui-prop>
+    <ui-prop name="云开发应用安全凭证版本号">
+      <ui-input v-value="appAccessKeyId" style="width: 250px;"></ui-input>
+    </ui-prop>
+    <ui-prop name="云开发应用安全凭证版私钥">
+      <ui-input v-value="appAccessKey" style="width: 250px;"></ui-input>
+    </ui-prop>
+  </div>
+  <br />
+  <ui-button v-on:confirm="updateConfigInfo">更新云开发配置信息</ui-button>
+</div>
