@@ -4,7 +4,6 @@ const crypto = require("crypto");
 const utils = Editor.require("packages://cocos-services/panel/utils/utils.js");
 
 async function onBeforeBuildFinish(options, callback) {
-  Editor.log("这里是哪里");
   var platform_adapter_mapping = {
     'baidugame': {
       adapter: 'adapter-bd_game.js',
@@ -72,6 +71,7 @@ async function onBeforeBuildFinish(options, callback) {
   var cur_mapping = platform_adapter_mapping[options.actualPlatform];
   if (typeof cur_mapping === 'undefined') {
     utils.printToCreatorConsole('warn', 'TCB Service only support iOS, Android, Android Instant, Mac, Windows, Web Mobile, Web Desktop, Baidu, Wechat, OPPO, vivo');
+    callback();
     return;
   }
   // 拷贝 Adapter 文件
